@@ -54,3 +54,34 @@ body {
     color: #fff;
     cursor: pointer;
 }
+
+.list-task {
+    border: 1px solid red;
+    margin-top: 2em;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.list-task .task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    border: 1px solid blue;
+}
+
+.task p {
+    width: 90%;
+    height: auto;
+    align-self: center;
+    border: 1px solid red;
+}
+
+.task button {
+    background-color: #e64545;
+    align-self: center;
+    padding: 1em;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
