@@ -3,6 +3,10 @@ const addButton = document.querySelector(".button-add");
 const taskList = document.querySelector(".list-task");
 
 
+const localStorageTasks = JSON.parse(localStorage.getItem('tasks'));
+let allTasks = localStorageTasks !== null ? localStorageTasks : [];
+
+
 
 // funções
 
@@ -23,7 +27,15 @@ const creatingTaskStructure = elem => {
     taskList.append(task);
 };
 
+const creatingTaskLocalStorage = () => {
+    localStorage.setItem('tasks', JSON.stringify(allTasks));
+};
+
 const generateID = () => Math.round(Math.random() * 1000);
+
+const init = () => {
+    allTasks.forEach(creatingTaskStructure);
+};
 
 
 // eventos
@@ -45,9 +57,11 @@ addButton.addEventListener('click', function(e){
         addInput.focus();
 
     } else {
-        
+
         alert('Insira alguma tarefa.');
     };
 });
 
 // inicializador
+
+init();
