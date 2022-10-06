@@ -23,6 +23,8 @@ const creatingTaskStructure = elem => {
     taskList.append(task);
 };
 
+const generateID = () => Math.round(Math.random() * 1000);
+
 // eventos
 
 
