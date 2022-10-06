@@ -25,7 +25,29 @@ const creatingTaskStructure = elem => {
 
 const generateID = () => Math.round(Math.random() * 1000);
 
+
 // eventos
 
+addButton.addEventListener('click', function(e){
+    e.preventDefault();
+
+    if(addInput.value){
+
+        taskList.innerHTML = '';
+
+        const newTaskObject = {id: generateID(), name: addInput.value}
+        allTasks.push(newTaskObject);
+        init();
+
+        creatingTaskLocalStorage();
+
+        addInput.value = '';
+        addInput.focus();
+
+    } else {
+        
+        alert('Insira alguma tarefa.');
+    };
+});
 
 // inicializador
