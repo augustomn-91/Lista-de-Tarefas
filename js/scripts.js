@@ -10,6 +10,13 @@ let allTasks = localStorageTasks !== null ? localStorageTasks : [];
 
 // funções
 
+const deleteTask = (id) => {
+    allTasks = allTasks.filter(elem => elem.id !== id);
+    creatingTaskLocalStorage();
+    taskList.innerHTML = '';
+    init();
+};
+
 const creatingTaskStructure = elem => {
 
     const task = document.createElement('div');
@@ -58,7 +65,7 @@ addButton.addEventListener('click', function(e){
 
     } else {
 
-        alert('Insira alguma tarefa.');
+        alert('Insira alguma tarefa!');
     };
 });
 
