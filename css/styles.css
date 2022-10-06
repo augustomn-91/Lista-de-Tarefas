@@ -13,13 +13,11 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    border: 1px solid red;
 }
 
 .container {
     width: 600px;
     height: auto;
-    border: 1px solid blue;
     padding: 1.5em 1.2em;
     margin-top: 1em;
 }
@@ -41,11 +39,13 @@ body {
     border: none;
     outline: none;
     font-size: 1em;
-    padding: 0.8em;
+    padding: 1.2em;
+    color: #5c5c5c;
+    font-weight: 600;
 }
 
 #control button {
-    padding: 0.8em 1em;
+    padding: 1.2em;
     font-size: 1em;
     font-weight: 600;
     background-color: #464646;
@@ -56,8 +56,7 @@ body {
 }
 
 .list-task {
-    border: 1px solid red;
-    margin-top: 2em;
+    margin-top: 3em;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -65,23 +64,25 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5em;
-    border: 1px solid blue;
 }
 
 .task p {
     width: 90%;
     height: auto;
+    padding: 1.1em;
     align-self: center;
-    border: 1px solid red;
+    font-size: 1em;
+    font-weight: 600;
+    color: #5c5c5c;
 }
 
 .task button {
-    background-color: #e64545;
     align-self: center;
-    padding: 1em;
+    font-size: 1em;
+    padding: 0.5em 1em;
     border: none;
-    color: #fff;
+    color: #e64545;
+    background-color: #fff;
     cursor: pointer;
     outline: none;
 }
